@@ -1,14 +1,19 @@
 import { Link } from "react-router-dom";
 
-import SkillCard from "../components/SkillCard";
-import skills from "../data/skills";
-
+import CapabilityCard from "../components/CapabilityCard";
+import Toolkit from "../components/Toolkit";
 import ProfileCard from "../components/ProfileCard";
+
+import capabilities from "../data/capabilities";
 import profile from "../data/profile";
 
 function About() {
   return (
     <main className="about-page">
+      {/* =================================
+          HERO
+      ================================= */}
+
       <section className="hero container">
         <div className="hero__content">
           <p className="hero__eyebrow">{profile.title}</p>
@@ -39,30 +44,41 @@ function About() {
         </div>
       </section>
 
+      {/* =================================
+          WHAT I BRING
+      ================================= */}
+
       <section id="capabilities" className="capabilities">
         <div className="container">
           <div className="section-heading">
-            <p className="section-label">What I do</p>
+            <p className="section-label">What I bring</p>
 
             <h2>
-              Business Development, Technology
-              <br />& Education.
+              People, strategy,
+              <br />
+              systems and impact.
             </h2>
 
             <p className="section-introduction">
-              I work across business development, digital systems and education
-              — bringing together people, processes and technology to solve
-              practical problems.
+              I bring together business development, relationship management,
+              project leadership and technology to help organisations move ideas
+              forward.
             </p>
           </div>
 
-          <div className="skills-grid">
-            {skills.map((skill) => (
-              <SkillCard key={skill.number} skill={skill} />
+          <div className="capabilities-grid">
+            {capabilities.map((capability) => (
+              <CapabilityCard key={capability.number} capability={capability} />
             ))}
           </div>
         </div>
       </section>
+
+      {/* =================================
+          MY TOOLKIT
+      ================================= */}
+
+      <Toolkit />
     </main>
   );
 }

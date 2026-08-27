@@ -1,8 +1,8 @@
 @import "./variables.css";
 
-/* =================================
+/* =========================================================
    RESET
-================================= */
+========================================================= */
 
 *,
 *::before,
@@ -42,9 +42,9 @@ body {
     color var(--transition);
 }
 
-/* =================================
+/* =========================================================
    ELEMENTS
-================================= */
+========================================================= */
 
 button,
 input,
@@ -75,9 +75,18 @@ p {
   margin-top: 0;
 }
 
-/* =================================
-   LAYOUT
-================================= */
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+:focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   GLOBAL LAYOUT
+========================================================= */
 
 .container {
   width: min(calc(100% - (var(--content-padding) * 2)), var(--content-width));
@@ -85,18 +94,9 @@ p {
   margin-inline: auto;
 }
 
-/* =================================
-   ACCESSIBILITY
-================================= */
-
-:focus-visible {
-  outline: 2px solid var(--color-text);
-  outline-offset: 3px;
-}
-
-/* =================================
+/* =========================================================
    NAVBAR
-================================= */
+========================================================= */
 
 .navbar {
   position: sticky;
@@ -135,7 +135,9 @@ p {
 
 .nav-link {
   color: var(--color-text-muted);
+
   font-size: 0.9rem;
+
   transition: color var(--transition);
 }
 
@@ -154,6 +156,7 @@ p {
   display: none;
 
   color: var(--color-text-muted);
+
   font-size: 0.85rem;
 
   transition: color var(--transition);
@@ -163,9 +166,9 @@ p {
   color: var(--color-text);
 }
 
-/* =================================
+/* =========================================================
    THEME TOGGLE
-================================= */
+========================================================= */
 
 .theme-toggle {
   width: 38px;
@@ -193,33 +196,24 @@ p {
   transform: translateY(-1px);
 }
 
-/* =================================
-   NAVBAR — TABLET / DESKTOP
-================================= */
-
-@media (min-width: 768px) {
-  .navbar__actions > a {
-    display: block;
-  }
-}
-
-/* =================================
+/* =========================================================
    ABOUT PAGE
-================================= */
+========================================================= */
 
 .about-page {
   min-height: calc(100vh - 64px);
 }
 
-/* =================================
+/* =========================================================
    HERO
-================================= */
+========================================================= */
 
 .hero {
   min-height: calc(100vh - 64px);
 
   display: grid;
   grid-template-columns: 1fr;
+
   align-items: center;
 
   gap: var(--space-3xl);
@@ -228,54 +222,9 @@ p {
   padding-bottom: var(--space-3xl);
 }
 
-/* =================================
-   HERO — DESKTOP
-================================= */
-
-@media (min-width: 768px) {
-  .hero {
-    grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
-
-    gap: var(--space-2xl);
-  }
-
-  .hero__visual {
-    justify-content: flex-end;
-  }
-}
-@media (max-width: 767px) {
-  .hero {
-    gap: var(--space-2xl);
-
-    padding-top: 2.5rem;
-    padding-bottom: 3rem;
-  }
-
-  .hero h1 {
-    font-size: clamp(2.5rem, 13vw, 4rem);
-  }
-
-  .hero__description {
-    font-size: 1rem;
-  }
-
-  .hero__actions {
-    flex-direction: column;
-  }
-
-  .button {
-    width: 100%;
-  }
-
-  .profile-card {
-    width: 100%;
-    max-width: 420px;
-  }
-}
-
-/* =================================
+/* =========================================================
    HERO CONTENT
-================================= */
+========================================================= */
 
 .hero__content {
   max-width: 680px;
@@ -288,6 +237,7 @@ p {
 
   font-size: 0.8rem;
   font-weight: 700;
+
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -312,13 +262,14 @@ p {
   line-height: 1.7;
 }
 
-/* =================================
+/* =========================================================
    HERO ACTIONS
-================================= */
+========================================================= */
 
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
+
   gap: var(--space-sm);
 }
 
@@ -363,9 +314,9 @@ p {
   background: var(--color-surface-hover);
 }
 
-/* =================================
+/* =========================================================
    PROFILE CARD
-================================= */
+========================================================= */
 
 .hero__visual {
   display: flex;
@@ -393,9 +344,9 @@ p {
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
 }
 
-/* =================================
+/* =========================================================
    PROFILE IMAGE
-================================= */
+========================================================= */
 
 .profile-card__image-wrapper {
   aspect-ratio: 4 / 5;
@@ -412,9 +363,9 @@ p {
   object-fit: cover;
 }
 
-/* =================================
-   PROFILE CONTENT
-================================= */
+/* =========================================================
+   PROFILE CARD CONTENT
+========================================================= */
 
 .profile-card__content {
   padding: var(--space-lg);
@@ -438,6 +389,8 @@ p {
   width: 8px;
   height: 8px;
 
+  flex-shrink: 0;
+
   border-radius: 50%;
 
   background: #4caf50;
@@ -455,22 +408,9 @@ p {
   color: var(--color-text-muted);
 }
 
-/* =================================
-   CAPABILITIES
-================================= */
-
-.capabilities {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-}
-@media (max-width: 767px) {
-
-  .capabilities {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
-
-}
+/* =========================================================
+   SECTION LABEL
+========================================================= */
 
 .section-label {
   margin-bottom: var(--space-sm);
@@ -479,25 +419,18 @@ p {
 
   font-size: 0.8rem;
   font-weight: 700;
+
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
-.capabilities h2 {
-  max-width: 700px;
-
-  margin-bottom: 0;
-
-  font-size: clamp(2rem, 6vw, 3.5rem);
-  line-height: 1.05;
-  letter-spacing: -0.035em;
-}
-/* =================================
+/* =========================================================
    SECTION HEADING
-================================= */
+========================================================= */
 
 .section-heading {
   max-width: 750px;
+
   margin-bottom: var(--space-2xl);
 }
 
@@ -521,11 +454,16 @@ p {
   line-height: 1.7;
 }
 
-/* =================================
-   SKILLS GRID
-================================= */
+/* =========================================================
+   WHAT I BRING / CAPABILITIES
+========================================================= */
 
-.skills-grid {
+.capabilities {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.capabilities-grid {
   display: grid;
   grid-template-columns: 1fr;
 
@@ -539,12 +477,12 @@ p {
   background: var(--color-border);
 }
 
-/* =================================
-   SKILL CARD
-================================= */
+/* =========================================================
+   CAPABILITY CARD
+========================================================= */
 
-.skill-card {
-  min-height: 320px;
+.capability-card {
+  min-height: 280px;
 
   display: flex;
   flex-direction: column;
@@ -553,88 +491,186 @@ p {
 
   background: var(--color-bg);
 
-  transition:
-    background-color var(--transition),
-    transform var(--transition);
+  transition: background-color var(--transition);
 }
 
-.skill-card:hover {
+.capability-card:hover {
   background: var(--color-surface);
 }
 
-.skill-card__number {
+.capability-card__number {
   margin-bottom: var(--space-2xl);
 
   color: var(--color-text-muted);
 
   font-size: 0.75rem;
   font-weight: 700;
+
   letter-spacing: 0.08em;
 }
 
-.skill-card__content {
+.capability-card__content {
   margin-top: auto;
 }
 
-.skill-card h3 {
-  margin-bottom: var(--space-sm);
+.capability-card h3 {
+  margin-bottom: var(--space-md);
 
   font-size: 1.5rem;
+
   line-height: 1.1;
   letter-spacing: -0.02em;
 }
 
-.skill-card p {
-  max-width: 480px;
+.capability-card p {
+  max-width: 500px;
 
-  margin-bottom: var(--space-lg);
+  margin-bottom: 0;
 
   color: var(--color-text-muted);
 
   font-size: 0.95rem;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
-/* =================================
-   SKILL LIST
-================================= */
+/* =========================================================
+   MY TOOLKIT
+========================================================= */
 
-.skill-card__list {
+.toolkit {
+  padding-top: 5rem;
+  padding-bottom: 6rem;
+
+  border-top: 1px solid var(--color-border);
+}
+
+.toolkit__heading {
+  margin-bottom: var(--space-xl);
+}
+
+.toolkit__heading h2 {
+  margin-bottom: 0;
+
+  font-size: clamp(2rem, 6vw, 3.5rem);
+
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.toolkit__list {
   display: flex;
   flex-wrap: wrap;
 
-  gap: 0.5rem;
-
-  padding: 0;
-  margin: 0;
-
-  list-style: none;
+  gap: 0.75rem;
 }
 
-.skill-card__list li {
-  padding: 0.4rem 0.65rem;
+.toolkit__item {
+  padding: 0.65rem 0.9rem;
 
   border: 1px solid var(--color-border);
   border-radius: 999px;
 
-  color: var(--color-text-muted);
-
   background: var(--color-surface);
+  color: var(--color-text);
 
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   font-weight: 600;
+
+  transition:
+    background-color var(--transition),
+    border-color var(--transition);
 }
 
-/* =================================
-   SKILLS GRID — DESKTOP
-================================= */
+.toolkit__item:hover {
+  background: var(--color-surface-hover);
+}
+
+/* =========================================================
+   TABLET / DESKTOP
+========================================================= */
 
 @media (min-width: 768px) {
-  .skills-grid {
+  /* ---------- NAVBAR ---------- */
+
+  .navbar__actions > a {
+    display: block;
+  }
+
+  /* ---------- HERO ---------- */
+
+  .hero {
+    grid-template-columns:
+      minmax(0, 1.2fr)
+      minmax(280px, 0.8fr);
+
+    gap: var(--space-2xl);
+  }
+
+  .hero__visual {
+    justify-content: flex-end;
+  }
+
+  /* ---------- CAPABILITIES ---------- */
+
+  .capabilities-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .skill-card {
-    min-height: 360px;
+  .capability-card {
+    min-height: 320px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+  /* ---------- HERO ---------- */
+
+  .hero {
+    gap: var(--space-2xl);
+
+    padding-top: 2.5rem;
+    padding-bottom: 3rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.5rem, 13vw, 4rem);
+  }
+
+  .hero__description {
+    font-size: 1rem;
+  }
+
+  /* ---------- HERO BUTTONS ---------- */
+
+  .hero__actions {
+    flex-direction: column;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  /* ---------- PROFILE CARD ---------- */
+
+  .profile-card {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  /* ---------- CAPABILITIES ---------- */
+
+  .capabilities {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  /* ---------- TOOLKIT ---------- */
+
+  .toolkit {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 }
