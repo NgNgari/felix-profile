@@ -1,17 +1,19 @@
 const skills = [
   {
+    number: "01",
     title: "Business Development",
     description:
-      "Building relationships, identifying opportunities and developing sustainable business growth.",
+      "Building relationships, identifying opportunities and developing sustainable growth.",
     skills: [
       "Business Development",
       "Sales",
-      "Relationship Management",
+      "Partnerships",
       "Stakeholder Engagement",
     ],
   },
 
   {
+    number: "02",
     title: "Technology & Automation",
     description:
       "Using technology and automation to improve workflows, systems and everyday productivity.",
@@ -25,21 +27,23 @@ const skills = [
   },
 
   {
+    number: "03",
     title: "AI & Productivity",
     description:
-      "Exploring practical ways to use AI and modern productivity tools to solve problems.",
+      "Using AI and modern productivity tools to solve practical problems and improve how work gets done.",
     skills: [
       "Prompt Engineering",
-      "AI-assisted Workflows",
-      "Microsoft 365",
       "Google Colab",
+      "Microsoft 365",
+      "AI Workflows",
     ],
   },
 
   {
+    number: "04",
     title: "Education & Community",
     description:
-      "Supporting education, managing projects and connecting people around meaningful initiatives.",
+      "Championing education and managing projects that connect people, ideas and meaningful outcomes.",
     skills: [
       "Championing Education",
       "Community Projects",

@@ -460,8 +460,16 @@ p {
 ================================= */
 
 .capabilities {
-  padding-top: var(--space-3xl);
-  padding-bottom: var(--space-3xl);
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+@media (max-width: 767px) {
+
+  .capabilities {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
 }
 
 .section-label {
@@ -483,4 +491,150 @@ p {
   font-size: clamp(2rem, 6vw, 3.5rem);
   line-height: 1.05;
   letter-spacing: -0.035em;
+}
+/* =================================
+   SECTION HEADING
+================================= */
+
+.section-heading {
+  max-width: 750px;
+  margin-bottom: var(--space-2xl);
+}
+
+.section-heading h2 {
+  margin-bottom: var(--space-lg);
+
+  font-size: clamp(2.25rem, 7vw, 4rem);
+
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.section-introduction {
+  max-width: 650px;
+
+  margin-bottom: 0;
+
+  color: var(--color-text-muted);
+
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* =================================
+   SKILLS GRID
+================================= */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  gap: 1px;
+
+  overflow: hidden;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+
+  background: var(--color-border);
+}
+
+/* =================================
+   SKILL CARD
+================================= */
+
+.skill-card {
+  min-height: 320px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: var(--space-xl);
+
+  background: var(--color-bg);
+
+  transition:
+    background-color var(--transition),
+    transform var(--transition);
+}
+
+.skill-card:hover {
+  background: var(--color-surface);
+}
+
+.skill-card__number {
+  margin-bottom: var(--space-2xl);
+
+  color: var(--color-text-muted);
+
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.skill-card__content {
+  margin-top: auto;
+}
+
+.skill-card h3 {
+  margin-bottom: var(--space-sm);
+
+  font-size: 1.5rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.skill-card p {
+  max-width: 480px;
+
+  margin-bottom: var(--space-lg);
+
+  color: var(--color-text-muted);
+
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* =================================
+   SKILL LIST
+================================= */
+
+.skill-card__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 0.5rem;
+
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.skill-card__list li {
+  padding: 0.4rem 0.65rem;
+
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+
+  color: var(--color-text-muted);
+
+  background: var(--color-surface);
+
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* =================================
+   SKILLS GRID — DESKTOP
+================================= */
+
+@media (min-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skill-card {
+    min-height: 360px;
+  }
 }

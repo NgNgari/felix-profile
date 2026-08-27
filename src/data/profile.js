@@ -6,7 +6,7 @@ const profile = {
   title: "Business Development × Technology × Education",
 
   introduction:
-    "I build relationships, improve systems and use technology to turn ideas into practical solutions.",
+    "Turning ideas into practical solutions...",
 
   location: "Kenya",
 
