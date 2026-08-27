@@ -1,6 +1,8 @@
 const profile = {
   name: "Felix Ngari",
 
+  firstName: "Felix",
+
   title: "Business Development × Technology × Education",
 
   introduction:
@@ -8,9 +10,12 @@ const profile = {
 
   location: "Kenya",
 
-  availability: "Open to conversations, collaborations and opportunities",
+  availability:
+    "Open to conversations, collaborations and opportunities",
 
   cta: "Let's Talk",
+
+  profileImage: "/profile.jpg",
 };
 
 export default profile;
