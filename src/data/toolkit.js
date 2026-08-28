@@ -1,12 +1,13 @@
 const toolkit = [
-  "Python",
-  "MERN Stack",
-  "Google Colab",
-  "Google Apps Script",
-  "Google Sheets",
+  "Prompt Engineering",
+  "SQL & NoSQL Databases",
   "Microsoft 365",
   "Excel",
-  "Prompt Engineering",
+  "Google Sheets",
+  "Google Colab",
+  "Google Apps Script",
+  "Python/ JavaScript",
+  "MERN Stack",
 ];
 
 export default toolkit;
