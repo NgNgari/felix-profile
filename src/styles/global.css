@@ -674,3 +674,177 @@ p {
     padding-bottom: 4rem;
   }
 }
+
+/* =========================================================
+   CONTACT PAGE
+========================================================= */
+
+.contact-page {
+  min-height: calc(100vh - 64px);
+}
+
+/* =========================================================
+   CONTACT HERO
+========================================================= */
+
+.contact-hero {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.contact-heading {
+  max-width: 850px;
+
+  margin-bottom: 4rem;
+}
+
+.contact-heading h1 {
+  margin-bottom: var(--space-lg);
+
+  font-size: clamp(3.5rem, 12vw, 7rem);
+
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+
+.contact-introduction {
+  max-width: 680px;
+
+  margin-bottom: 0;
+
+  color: var(--color-text-muted);
+
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   CONTACT CHANNELS
+========================================================= */
+
+.contact-channels {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  gap: 1px;
+
+  overflow: hidden;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+
+  background: var(--color-border);
+}
+
+.contact-channel {
+  min-height: 130px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: var(--space-lg);
+
+  padding: var(--space-xl);
+
+  background: var(--color-bg);
+
+  transition: background-color var(--transition);
+}
+
+.contact-channel:hover {
+  background: var(--color-surface);
+}
+
+.contact-channel h2 {
+  margin-bottom: 0.35rem;
+
+  font-size: 1.35rem;
+  line-height: 1.1;
+}
+
+.contact-channel p {
+  margin-bottom: 0;
+
+  color: var(--color-text-muted);
+
+  font-size: 0.9rem;
+}
+
+.contact-channel__arrow {
+  flex-shrink: 0;
+
+  font-size: 1.5rem;
+
+  transition: transform var(--transition);
+}
+
+.contact-channel:hover .contact-channel__arrow {
+  transform: translate(3px, -3px);
+}
+
+/* =========================================================
+   CONTACT AVAILABILITY
+========================================================= */
+
+.contact-availability {
+  max-width: 680px;
+
+  margin-top: var(--space-xl);
+  margin-bottom: 0;
+
+  color: var(--color-text-muted);
+
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   CONTACT — DESKTOP
+========================================================= */
+
+@media (min-width: 768px) {
+  .contact-channels {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .contact-channel {
+    min-height: 200px;
+
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-channel__arrow {
+    margin-top: auto;
+  }
+}
+
+/* =========================================================
+   CONTACT — MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+  .contact-hero {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .contact-heading {
+    margin-bottom: 2.5rem;
+  }
+
+  .contact-heading h1 {
+    font-size: clamp(3.5rem, 18vw, 5rem);
+  }
+
+  .contact-introduction {
+    font-size: 1rem;
+  }
+
+  .contact-channel {
+    min-height: 110px;
+
+    padding: 1.25rem;
+  }
+}
