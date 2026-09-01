@@ -12,13 +12,13 @@ const contact = {
     {
       name: "LinkedIn",
       description: "Let's connect professionally",
-      url: "YOUR_LINKEDIN_URL",
+      url: "https://www.linkedin.com/in/felixnngari/",
     },
 
     {
       name: "WhatsApp",
       description: "Start a conversation",
-      url: "YOUR_WHATSAPP_URL",
+      url: "https://wa.me/254712135775",
     },
 
     {
