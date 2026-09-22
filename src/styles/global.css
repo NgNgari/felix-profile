@@ -167,6 +167,20 @@ p {
 }
 
 /* =========================================================
+   Hover Effects
+========================================================= */
+.nav-link {
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.nav-link:hover,
+.nav-link--active {
+  color: var(--color-bg); /* Swaps text color if needed */
+  background-color: var(--color-text); /* Uses text color as background */
+}
+
+/* =========================================================
    THEME TOGGLE
 ========================================================= */
 

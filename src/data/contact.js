@@ -24,7 +24,7 @@ const contact = {
     {
       name: "GitHub",
       description: "Find me on GitHub",
-      url: "YOUR_GITHUB_URL",
+      url: "https://github.com/NgNgari",
     },
   ],
 };
