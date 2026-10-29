@@ -496,12 +496,12 @@ p {
 ========================================================= */
 
 .capability-card {
-  min-height: 280px;
+  min-height: 220px;
 
   display: flex;
   flex-direction: column;
 
-  padding: var(--space-xl);
+  padding: var(--space-md) var(--space-lg) var(--space-lg);
 
   background: var(--color-bg);
 
@@ -524,7 +524,7 @@ p {
 }
 
 .capability-card__content {
-  margin-top: auto;
+  margin-top: 0;
 }
 
 .capability-card h3 {
@@ -631,7 +631,7 @@ p {
   }
 
   .capability-card {
-    min-height: 320px;
+    min-height: 240px;
   }
 }
 

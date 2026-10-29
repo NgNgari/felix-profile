@@ -15,7 +15,7 @@ const profile = {
 
   cta: "Let's Talk",
 
-  profileImage: "/profile.jpg",
+  profileImage: "/profile.jpeg",
 };
 
 export default profile;
