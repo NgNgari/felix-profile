@@ -12,8 +12,11 @@
 
   --color-border: #e5e5e5;
 
-  --color-primary: #111111;
+  --color-primary: #0f766e;
   --color-primary-text: #ffffff;
+  --color-accent: #0f766e;
+  --color-accent-soft: rgba(15, 118, 110, 0.1);
+  --color-accent-glow: rgba(15, 118, 110, 0.18);
 
   /* ================================
      LAYOUT
@@ -63,6 +66,9 @@
 
   --color-border: #2a2a2a;
 
-  --color-primary: #ffffff;
+  --color-primary: #5eead4;
   --color-primary-text: #111111;
+  --color-accent: #5eead4;
+  --color-accent-soft: rgba(94, 234, 212, 0.12);
+  --color-accent-glow: rgba(94, 234, 212, 0.16);
 }

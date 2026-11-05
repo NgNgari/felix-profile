@@ -18,15 +18,34 @@ function About() {
         <div className="hero__content">
           <p className="hero__eyebrow">{profile.title}</p>
 
-          <h1>
-            Building relationships.
-            <br />
-            Improving systems.
-            <br />
-            Creating impact.
+          <h1
+            className="hero__headline"
+            aria-label="Building relationships. Improving systems. Creating impact."
+          >
+            <span className="hero__dropping-texts" aria-hidden="true">
+              <span>Building relationships.</span>
+              <span>Improving systems.</span>
+              <span>Creating impact.</span>
+            </span>
           </h1>
 
-          <p className="hero__description">{profile.introduction}</p>
+          <p className="hero__description">
+            <span className="visually-hidden">
+              From thought to impact! From concept to execution! From ideas to
+              practical solutions!
+            </span>
+            <span className="hero__typewriter" aria-hidden="true">
+              <span>
+                From thought to <strong>impact!</strong>
+              </span>
+              <span>
+                From concept to <strong>execution!</strong>
+              </span>
+              <span>
+                From ideas to <strong>practical solutions!</strong>
+              </span>
+            </span>
+          </p>
 
           <div className="hero__actions">
             <Link to="/contact" className="button button--primary">
