@@ -1,4 +1,5 @@
 import profile from "../data/profile";
+import socials from "../data/socials";
 
 function ProfileCard() {
   return (
@@ -8,6 +9,7 @@ function ProfileCard() {
           src={profile.profileImage}
           alt={`${profile.name} profile`}
           className="profile-card__image"
+          decoding="async"
         />
       </div>
 
@@ -19,7 +21,15 @@ function ProfileCard() {
 
         <h2>{profile.name}</h2>
 
-        <p>{profile.location}</p>
+        <a
+          className="profile-card__phone"
+          href={socials.whatsapp}
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Message Felix on WhatsApp at plus 254 712 135 775"
+        >
+          +254712135775
+        </a>
       </div>
     </div>
   );

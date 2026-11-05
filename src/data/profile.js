@@ -3,7 +3,7 @@ const profile = {
 
   firstName: "Felix",
 
-  title: "Business Development × Technology × Education",
+  title: "Business Development | Technology | Education",
 
   introduction:
     "Turning ideas into practical solutions...",
