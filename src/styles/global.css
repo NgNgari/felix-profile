@@ -1030,10 +1030,77 @@ h3 {
   padding-bottom: 7rem;
 }
 
+.contact-overview {
+  display: grid;
+  gap: var(--space-xl);
+
+  margin-bottom: 4rem;
+}
+
 .contact-heading {
   max-width: 850px;
 
-  margin-bottom: 4rem;
+  margin-bottom: 0;
+}
+
+.contact-visual {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: clamp(1.5rem, 4vw, 3rem);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+
+  background:
+    radial-gradient(ellipse at 100% 0, var(--color-accent-soft), transparent 55%),
+    var(--color-surface);
+}
+
+.contact-visual__label {
+  margin-bottom: 1.5rem;
+
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.contact-visual__steps {
+  display: grid;
+  gap: 1rem;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.contact-visual__steps li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact-visual__steps li > span {
+  width: 2.5rem;
+  height: 2.5rem;
+  flex: 0 0 2.5rem;
+  display: grid;
+  place-items: center;
+
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+
+  color: var(--color-accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.contact-visual__steps strong {
+  font-size: 1rem;
 }
 
 .contact-heading h1 {
@@ -1212,6 +1279,11 @@ h3 {
 ========================================================= */
 
 .contact-availability {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-md) var(--space-lg);
+
   max-width: 680px;
 
   margin-top: var(--space-xl);
@@ -1221,6 +1293,18 @@ h3 {
 
   font-size: 0.95rem;
   line-height: 1.7;
+}
+
+.contact-availability p {
+  margin-bottom: 0;
+}
+
+@media (min-width: 1100px) {
+  .contact-overview {
+    grid-template-columns: minmax(0, 1.15fr) minmax(250px, 0.85fr);
+    align-items: stretch;
+    gap: clamp(2rem, 6vw, 5rem);
+  }
 }
 
 /* =========================================================
@@ -1648,6 +1732,10 @@ h3 {
   }
 
   .contact-heading {
+    margin-bottom: 0;
+  }
+
+  .contact-overview {
     margin-bottom: var(--space-xl);
   }
 

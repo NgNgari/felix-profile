@@ -1,12 +1,17 @@
+const whatsappUrl = "https://wa.me/254712135775";
+
 const contact = {
-    // https://formspree.io/f/xvkoooyy
+  // https://formspree.io/f/xvkoooyy
   heading: "Let's talk.",
 
-  introduction:
-    "Technology is at its best when it empowers people. Whether you need help automating workflows, improving business processes, or want to explore how children can begin developing programming and logical thinking skills from an early age, let's connect.",
+  introduction: {
+    emphasis: "Great tech solves real problems, and anyone can learn how to build it!",
+    continuation:
+      " With a bit of step-by-step guidance, anyone can learn to build their own everyday tools—especially now, in the age of AI. Whether you want that hands-on support to create apps that save you time, or you want to help kids start tinkering with code to build strong problem-solving habits, I would love to hear from you.",
+  },
 
-  availability:
-    "I'd be glad to hear your ideas and discuss how we can turn them into something impactful.",
+  availability: "Send your idea over, let us bring it to life.",
+  whatsappUrl,
 
   channels: [
     {
@@ -18,7 +23,7 @@ const contact = {
     {
       name: "WhatsApp",
       description: "Start a conversation",
-      url: "https://wa.me/254712135775",
+      url: whatsappUrl,
     },
 
     {
